@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/NewXMLSchema" xmlns:tns="http://www.example.org/NewXMLSchema" elementFormDefault="qualified">
+
+
+    <complexType name="DVD">
+    	<attribute name="Title" type="string"></attribute>
+    	<attribute name="Release" type="date"></attribute>
+    	<attribute name="Genre" type="tns:GenreType"></attribute>
+    	<attribute name="Language" type="tns:LanguageType"></attribute>
+    </complexType>
+
+    <simpleType name="GenreType">
+    	<restriction base="string">
+    		<enumeration value="Action"></enumeration>
+    		<enumeration value="Family"></enumeration>
+    		<enumeration value="Anime"></enumeration>
+    		<enumeration value="Horror"></enumeration>
+    		<enumeration value="Documentary"></enumeration>
+    	</restriction>
+    </simpleType>
+
+    <simpleType name="LanguageType">
+    	<restriction base="string">
+    		<enumeration value="English"></enumeration>
+    		<enumeration value="French"></enumeration>
+    		<enumeration value="Chinese"></enumeration>
+    	</restriction>
+    </simpleType>
+</schema>
